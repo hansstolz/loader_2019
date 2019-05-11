@@ -9,9 +9,9 @@ let loader=JSONLoader()
 let bands=loader.load()
 
 if let database=Database() {
-    //database.saveBands(bands)
-    //database.buildRelations()
-    database.loadImages()
+    database.saveBands(bands)
+    database.buildRelations()
+    //database.loadImages()
 }
 
 
