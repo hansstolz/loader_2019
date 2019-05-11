@@ -72,7 +72,7 @@ class Database {
     
     func saveBands(_ bands:[Band]) {
         do {
-        let _ =  try client?.simpleQuery("truncate table band").wait()
+        let _ =  try client?.simpleQuery("truncate table Band").wait()
         
         for band in bands {
             
