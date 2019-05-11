@@ -12,7 +12,7 @@ import MySQL
 final class Band:Codable,MySQLTable {
     static let baseURL="https://umsonst-und-draussen.de/band_bilderupload"
     static var entity: String {
-        return "band"
+        return "Band"
     }
     
     typealias ID = Int
