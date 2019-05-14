@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Cgd",
+        "repositoryURL": "https://github.com/twostraws/Cgd.git",
+        "state": {
+          "branch": null,
+          "revision": "2e370814715c3557bb1cbdcd96e610ce29e83e45",
+          "version": "0.2.0"
+        }
+      },
+      {
         "package": "Core",
         "repositoryURL": "https://github.com/vapor/core.git",
         "state": {
@@ -47,15 +56,6 @@
         }
       },
       {
-        "package": "PostgreSQL",
-        "repositoryURL": "https://github.com/vapor/postgresql.git",
-        "state": {
-          "branch": null,
-          "revision": "41cec2846f9cdd8233675da0d256efa3b8d62b21",
-          "version": "1.4.1"
-        }
-      },
-      {
         "package": "Service",
         "repositoryURL": "https://github.com/vapor/service.git",
         "state": {
@@ -71,15 +71,6 @@
           "branch": null,
           "revision": "50eaeb8f52a1ce63f1ff3880e1114dd8757a78a6",
           "version": "2.3.2"
-        }
-      },
-      {
-        "package": "SwifQL",
-        "repositoryURL": "https://github.com/MihaelIsaev/SwifQL.git",
-        "state": {
-          "branch": null,
-          "revision": "7071fe6667a15cb73f33054ea1d2031a2a45b55b",
-          "version": "0.9.2"
         }
       },
       {
@@ -116,6 +107,15 @@
           "branch": null,
           "revision": "37760e9a52030bb9011972c5213c3350fa9d41fd",
           "version": "1.0.0"
+        }
+      },
+      {
+        "package": "SwiftGD",
+        "repositoryURL": "https://github.com/hansstolz/SwiftGD.git",
+        "state": {
+          "branch": null,
+          "revision": "a2e3f0f1565b007a5de20589ce85cd474f42bfd6",
+          "version": "2.4.0"
         }
       }
     ]

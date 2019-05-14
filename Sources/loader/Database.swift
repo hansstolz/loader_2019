@@ -27,6 +27,54 @@ class Database {
         loader.load(bands: bands)
     }
     
+    private func truncate(table:String) {
+        do {
+        let _ =  try client?.simpleQuery("truncate table \(table)").wait()
+        }catch let ex {
+            print(ex)
+        }
+    }
+    
+    func buildGenres() {
+        self.truncate(table: "Genre")
+        let bands = getBands()
+        
+        var all = [String]()
+        
+        for band in bands {
+            if let tags=band.Tags?.components(separatedBy: ", ") {
+                all.append(contentsOf: tags)
+            }
+        }
+        
+        let genres=Set<String>(all)
+        
+        
+        for genre in genres {
+            var found=[Int]()
+            for band in bands {
+                if let tags=band.Tags, tags.contains(genre) {
+                    found.append(band.id!)
+                }
+            }
+            
+            let record=Genre(genre: genre, bands: found)
+            do {
+                let _ = try  client?.insert(into: Genre.self).value(record).run().wait()
+            }catch let ex {
+                print(ex)
+            }
+        }
+        
+        
+        
+        //let result=set.map{ $0.replacingOccurrences(of: "_", with: "/") }
+        
+        
+        
+        
+    }
+    
     
     func buildRelations() {
         let bands = getBands()
@@ -71,8 +119,11 @@ class Database {
     }
     
     func saveBands(_ bands:[Band]) {
+        
+        self.truncate(table: "Band")
+        
         do {
-        let _ =  try client?.simpleQuery("truncate table Band").wait()
+        
         
         for band in bands {
             

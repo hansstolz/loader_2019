@@ -13,7 +13,7 @@ extension MySQLConnection {
     static func connect()throws -> MySQLConnection {
             let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
         
-           // let database = MySQLDatabaseConfig(hostname: "localhost", port: 3306,  username: "root", password: "fermat", database: "uud")
+         //  let database = MySQLDatabaseConfig(hostname: "localhost", port: 3306,  username: "root", password: "fermat", database: "uud")
         
         let database = MySQLDatabaseConfig(hostname: "46.101.243.221", port: 3306,  username: "root", password: "Galois271", database: "uud")
         
